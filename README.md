@@ -1,4 +1,4 @@
-# Skip Selection Page Redesign - README
+# Skip Selection Page Redesign
 
 ## Overview
 
