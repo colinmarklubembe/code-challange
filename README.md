@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Skip Selection Page Redesign - README
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a redesign of WeWantWaste's "Choose Your Skip Size" page while maintaining all original functionality. The implementation focuses on an improved UI and responsive design.
+
+**Live Demo:** [_CodeSandbox Link_](https://codesandbox.io/p/github/colinmarklubembe/code-challange/main?import=true)
+
+---
+
+## Key Design Decisions
+
+### Modern Visual Identity
+
+- Replaced original design with dark-themed gradient background
+- Added dynamic particle background for visual depth
+- Implemented glass-morphism cards with subtle animations
+- Used vibrant gradient accents for interactive elements
+
+### Enhanced User Experience
+
+- Added clear step progression indicator
+- Implemented animated card selection with hover effects
+- Created sticky summary bar for selected skip
+- Added visual badges for popular options
+- Included feature tags with descriptive icons
+
+### Responsive Implementation
+
+- Mobile-first grid system (1 → 2 → 3 → 4 columns)
+- Touch-friendly interactive elements
+
+### Technical Improvements
+
+- VAT calculation helper function
+- Dynamic image selection based on skip size
+- Comprehensive loading/error states
+
+---
+
+## Features Retained from Original
+
+- Skip size selection functionality
+- Price display (including VAT calculations)
+- Hire period information
+- Road placement permissions
+- Heavy waste allowances
+- Progressive step navigation
+
+---
+
+## Technical Stack
+
+- Next.jsc
+- React 19
+- TypeScript
+- Tailwind CSS
+- Lucide-React Icons
+- Fetch API for data retrieval
+
+---
+
+## Installation
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## API Integration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Fetches skip data from:
 
-## Learn More
+[https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft](https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Responsive Breakpoints
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Mobile:** < 640px (1 column)
+- **Tablet:** 640-1024px (2 columns)
+- **Desktop:** 1024-1280px (3 columns)
+- **Large Desktop:** > 1280px (4-5 columns)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Areas for possible Future Improvement
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Real skip images from API
+- Price comparison visualizations
+- Waste type capacity indicators
+- Interactive size recommender
+- Local storage for selection persistence
+
+---
+
+This implementation delivers a complete visual overhaul while maintaining original functionality and providing enhanced user experience across the different device sizes.
